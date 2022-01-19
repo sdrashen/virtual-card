@@ -24,35 +24,55 @@
           </span>
                 <img src="http://lorempixel.com.br/185/185" alt="Foto de Sabrina Drashen" />
             </div>
-            <h1>Sabrina Drashen</h1>
-            <a href="https://www.instagram.com/sabrina.drashen/"><img src="images/github.svg" alt="Ícone github" />sabrinadrashen
+            <h1 id="userName">Sabrina Drashen</h1>
+            <a href="https://www.github.com/sabrina.drashen/" target="_blanket"><img src="images/github.svg" alt="Ícone github" />sabrinadrashen
             </a>
             <p>An instructor focused on helping people start programming for web</p>
 
-            <ul>
-                <li>
-                    <a href="https://youtube.com/sabrinadrashen">
-                        <img src="images/youtube.svg" alt="Ícone youtube" target="_blanket" />
+            <ul id="socialLinks">
+                <li class="youtube">
+                    <a href="https://youtube.com/sabrinadrashen" target="_blanket">
+                        <img src="images/youtube.svg" alt="Ícone youtube" />
                     </a>
                 </li>
-                <li>
-                    <a href="https://facebook.com/sabrinadrashen">
-                        <img src="images/facebook.svg" alt="Ícone facebook" target="_blanket" />
+                <li class="facebook">
+                    <a href="https://facebook.com/sabrinadrashen" target="_blanket">
+                        <img src="images/facebook.svg" alt="Ícone facebook" />
                     </a>
                 </li>
-                <li>
-                    <a href="https://instagram.com/sabrinadrashen">
-                        <img src="images/instagram.svg" alt="Ícone instagram" target="_blanket" />
+                <li class="instagram">
+                    <a href="https://instagram.com/sabrinadrashen" target="_blanket">
+                        <img src="images/instagram.svg" alt="Ícone instagram" />
                     </a>
                 </li>
-                <li>
-                    <a href="https://twitter.com/sabrinadrashen">
-                        <img src="images/twitter.svg" alt="Ícone twitter" target="_blanket" />
+                <li class="twitter">
+                    <a href="https://twitter.com/sabrinadrashen" target="_blanket">
+                        <img src="images/twitter.svg" alt="Ícone twitter" />
                     </a>
                 </li>
             </ul>
         </div>
     </main>
+    <script>
+        const LinksSocialMedia = {
+            github: 'sdrashen',
+            youtube: 'sabrinadrashen',
+            facebook: 'sabrinadrashen',
+            instagram: 'sabrina.drashen',
+            twitter: 'StarDrashen'
+        }
+
+        function changeSocialMediaLinks() {
+            for (let li of socialLinks.children) {
+                const social = li.getAttribute('class')
+                li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+                alert(li.children[0].href)
+            }
+        }
+
+        changeSocialMediaLinks()
+    </script>
 </body>
 
 </html>
