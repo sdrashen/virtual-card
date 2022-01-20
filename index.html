@@ -22,12 +22,15 @@
                 <span>
             <img src="images/build.svg" alt="Selo rocketseat" />
           </span>
-                <img src="http://lorempixel.com.br/185/185" alt="Foto de Sabrina Drashen" />
+                <img src="http://lorempixel.com.br/185/185" alt="Foto pessoal" id="userImage" />
             </div>
             <h1 id="userName">Sabrina Drashen</h1>
-            <a href="https://www.github.com/sabrina.drashen/" target="_blanket"><img src="images/github.svg" alt="Ícone github" />sabrinadrashen
+            <a id="userLink" href="https://www.github.com/sabrina.drashen/" target="_blanket"><img src="images/github.svg" alt="Ícone github" />
+                <span id="userLogin">sabrinadrashen</span>
             </a>
-            <p>An instructor focused on helping people start programming for web</p>
+            <p id="userBio">
+                An instructor focused on helping people start programming for web
+            </p>
 
             <ul id="socialLinks">
                 <li class="youtube">
@@ -53,26 +56,7 @@
             </ul>
         </div>
     </main>
-    <script>
-        const LinksSocialMedia = {
-            github: 'sdrashen',
-            youtube: 'sabrinadrashen',
-            facebook: 'sabrinadrashen',
-            instagram: 'sabrina.drashen',
-            twitter: 'StarDrashen'
-        }
-
-        function changeSocialMediaLinks() {
-            for (let li of socialLinks.children) {
-                const social = li.getAttribute('class')
-                li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-
-                alert(li.children[0].href)
-            }
-        }
-
-        changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
